@@ -1,6 +1,6 @@
 {
   "name": "gulu-cool-vue2",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "this is UI component",
   "main": "index.js",
   "scripts": {
