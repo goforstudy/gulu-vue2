@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div id="app">
     <div class="wrapper">
       <g-button icon="setting" icon-position="left">button</g-button>
-      <g-button icon="download" iconPosition="up">no icon</g-button>
+      <g-button icon="download" iconPosition="left">no icon</g-button>
       <g-button icon="setting" icon-position="right">button</g-button>
       <g-button
         @click="changeLoading"
@@ -15,7 +15,7 @@
         @click="changeLoading"
         :loading="loading"
         icon="download"
-        iconPosition="up"
+        iconPosition="left"
         >no icon</g-button
       >
       <g-button
