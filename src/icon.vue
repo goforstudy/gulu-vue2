@@ -5,16 +5,16 @@
 </template>
 <script>
 export default {
-    props: {
-        name: {
-            type: String,
-            default: ''
-        }
-    }
+  name: "GIcon",
+  props: {
+    name: {
+      type: String,
+      default: "",
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
-
 .icon {
   height: 1em;
   width: 1em;

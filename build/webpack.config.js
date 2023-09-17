@@ -9,7 +9,7 @@ module.exports = merge(
     },
     externals: "vue",
     output: {
-      filename: '[name].js',
+      filename: 'gulu-vue2.js',
       path: path.resolve(__dirname, "../dist"),
       libraryTarget: 'umd',
       library: '[name]',
