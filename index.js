@@ -1,6 +1,8 @@
-import Button from "./src/button"
-import ButtonGroup from "./src/button-group"
-import Icon from "./src/icon"
+import GButton from "./src/button.vue"
+import GButtonGroup from "./src/button-group.vue"
+import GIcon from "./src/icon.vue"
 import "./index.scss"
 import "./icon.js"
-export { Button, ButtonGroup, Icon }
+import Vue from "vue"
+Vue.component('GIcon', GIcon)
+export { GButton, GButtonGroup, GIcon }
