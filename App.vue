@@ -1,6 +1,13 @@
 <template>
   <div id="app">
     <div class="wrapper">
+      {{inputValue}}
+      <g-input v-model="inputValue"></g-input>
+      <g-input v-model="inputValue" disabled></g-input>
+      <g-input v-model="inputValue" readonly></g-input>
+      <g-input v-model="inputValue" error="错误提示"></g-input>
+    </div>
+    <div class="wrapper">
       <g-button icon="setting" icon-position="left">button</g-button>
       <g-button icon="download" iconPosition="left">no icon</g-button>
       <g-button icon="setting" icon-position="right">button</g-button>
@@ -44,6 +51,7 @@ export default {
   data() {
     return {
       loading: false,
+      inputValue: '123'
     };
   },
   methods: {

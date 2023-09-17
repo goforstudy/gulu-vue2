@@ -5,7 +5,6 @@ import "./index.scss";
 import "./icon.js";
 const components = [GButton, GButtonGroup, GIcon];
 const install = function (Vue, opts = {}) {
-  console.log("components", components.name)
   components.forEach((component) => {
     Vue.component(component.name, component);
   });
