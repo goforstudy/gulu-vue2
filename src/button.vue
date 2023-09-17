@@ -40,12 +40,12 @@ $icon-gap: 0.3em;
   }
 }
 .g-button {
-  font-size: var(--font-size);
-  height: var(--button-height);
+  font-size: var(--g-font-size);
+  height: var(--g-button-height);
   padding: 0 1em;
-  border-radius: var(--border-radius);
-  border: 1px solid var(--border-color);
-  background: var(--button-bg);
+  border-radius: var(--g-border-radius);
+  border: 1px solid var(--g-border-color);
+  background: var(--g-button-bg);
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -71,10 +71,10 @@ $icon-gap: 0.3em;
     }
   }
   &:hover {
-    border-color: var(--border-color-hover);
+    border-color: var(--g-border-color-hover);
   }
   &:active {
-    border-color: var(--button-active-bg);
+    border-color: var(--g-button-active-bg);
   }
   &:focus {
     outline: none;
