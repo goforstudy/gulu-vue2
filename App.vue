@@ -1,7 +1,28 @@
 <template>
   <div id="app">
     <div class="wrapper">
-      {{inputValue}}
+      <g-row>
+        <g-col span="12"><div></div></g-col>
+        <g-col span="12"><div></div></g-col>
+      </g-row>
+      <g-row>
+        <g-col span="4"><div></div></g-col>
+        <g-col span="6" offset="2"><div></div></g-col>
+        <g-col span="4"><div></div></g-col>
+        <g-col span="8"><div></div></g-col>
+      </g-row>
+      <g-row :gutter="12">
+        <g-col span="8"><div></div></g-col>
+        <g-col span="8"><div></div></g-col>
+        <g-col span="8"><div></div></g-col>
+      </g-row>
+      <g-row :gutter="12">
+        <g-col span="8" :xs="{span: 12}"><div></div></g-col>
+        <g-col span="8"><div></div></g-col>
+        <g-col span="8"><div></div></g-col>
+      </g-row>
+    </div>
+    <div class="wrapper" style="display: flex">
       <g-input v-model="inputValue"></g-input>
       <g-input v-model="inputValue" disabled></g-input>
       <g-input v-model="inputValue" readonly></g-input>
@@ -51,7 +72,7 @@ export default {
   data() {
     return {
       loading: false,
-      inputValue: '123'
+      inputValue: "123",
     };
   },
   methods: {
@@ -64,5 +85,21 @@ export default {
 <style lang="scss" scoped>
 .wrapper {
   margin: 20px;
+}
+.wrapper {
+  .col {
+    &:nth-child(2n) {
+      div {
+        background: lightgray;
+        height: 20px;
+      }
+    }
+    &:nth-child(2n + 1) {
+      div {
+        background: gray;
+        height: 20px;
+      }
+    }
+  }
 }
 </style>
