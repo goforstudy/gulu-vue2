@@ -1,5 +1,32 @@
 <template>
   <div id="app">
+    <div class="content-wrapper wrapper">
+      <g-layout>
+        <g-header>header</g-header>
+        <g-content>content</g-content>
+        <g-footer>footer</g-footer>
+      </g-layout>
+    </div>
+    <div class="content-wrapper wrapper">
+      <g-layout>
+        <g-header>header</g-header>
+        <g-layout>
+          <g-sider>sider</g-sider>
+          <g-content>content</g-content>
+        </g-layout>
+        <g-footer>footer</g-footer>
+      </g-layout>
+    </div>
+    <div class="content-wrapper wrapper">
+      <g-layout>
+        <g-sider>sider</g-sider>
+        <g-layout>
+          <g-header>header</g-header>
+          <g-content>content</g-content>
+          <g-footer>footer</g-footer>
+        </g-layout>
+      </g-layout>
+    </div>
     <div class="wrapper">
       <g-row>
         <g-col span="12"><div></div></g-col>
@@ -17,7 +44,7 @@
         <g-col span="8"><div></div></g-col>
       </g-row>
       <g-row :gutter="12">
-        <g-col span="8" :xs="{span: 12}"><div></div></g-col>
+        <g-col span="8" :xs="{ span: 12 }"><div></div></g-col>
         <g-col span="8"><div></div></g-col>
         <g-col span="8"><div></div></g-col>
       </g-row>
@@ -85,6 +112,26 @@ export default {
 <style lang="scss" scoped>
 .wrapper {
   margin: 20px;
+}
+.content-wrapper {
+  height: 200px;
+  width: 300px;
+  > div > div {
+    border: 1px solid var(--g-border-color);
+  }
+  .header,
+  .footer {
+    background-color: #b3c0d1;
+  }
+  .content {
+    background-color: #e9eef3;
+  }
+  .sider {
+    background-color: #d3dce6;
+  }
+  .layout {
+    height: 100%;
+  }
 }
 .wrapper {
   .col {
