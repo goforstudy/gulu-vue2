@@ -1,5 +1,31 @@
 <template>
   <div id="app">
+    <div>
+      <g-button
+        @click="
+          () => {
+            this.$toast(
+              '我们经常会在利用Vue开发的项目中，多次重复使用某一段代码结构，这就需要我们把它封装成公共组件，注册在全局进行多次复用。'
+            );
+          }
+        "
+        >测试toast</g-button
+      >
+      <g-button
+        @click="
+          () => {
+            this.$toast('可点击关闭的toast', {
+              callback: () => {
+                alert('点击toast回调');
+              },
+              showClose: true,
+            });
+          }
+        "
+        >展示可关闭按钮</g-button
+      >
+      <g-button @click="closeToast">无法自行关闭</g-button>
+    </div>
     <div class="content-wrapper wrapper">
       <g-layout>
         <g-header>header</g-header>
@@ -102,7 +128,18 @@ export default {
       inputValue: "123",
     };
   },
+  mounted() {},
   methods: {
+    closeToast() {
+      this.$toast(`可点击关闭的toast ${Number.parseInt(Math.random() * 100)}`, {
+        callback: () => {
+          console.log("call back");
+        },
+        showClose: true,
+        autoClose: false,
+        position: "middle",
+      });
+    },
     changeLoading() {
       this.loading = !this.loading;
     },

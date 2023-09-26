@@ -2,7 +2,7 @@
   "name": "gulu-cool-vue2",
   "version": "0.0.8",
   "description": "this is UI component",
-  "main": "dist/index.js",
+  "main": "dist/gulu-vue2.js",
   "scripts": {
     "dev": "webpack-dev-server --config ./build/webpack.dev.js",
     "build": "webpack --config ./build/webpack.config.js",

@@ -4,9 +4,10 @@
   box-sizing: border-box;
 }
 :root {
+  --g-white: #fff;
   --g-button-height: 32px;
   --g-font-size: 14px;
-  --g-button-bg: white;
+  --g-button-bg: var(--g-white);
   --g-background: #eee;
   --g-button-active-bg: var(--g-background);
   --g-border-radius: 4px;
@@ -16,5 +17,6 @@
   --g-disabled: #bbb;
   --g-error: #f00;
   --g-primary: #409EFF;
+  --g-black: #000;
 
 }
