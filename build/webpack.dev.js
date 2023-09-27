@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = merge(common, {
   mode: "development",
+  devtool: 'source-map',
   entry: path.resolve(__dirname, "../main.js"),
   plugins: [
     new HtmlWebpackPlugin({

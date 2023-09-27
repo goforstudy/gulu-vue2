@@ -1,6 +1,20 @@
 <template>
   <div id="app">
-    <div>
+    <div class="wrapper" style="margin-bottom: 1400px">
+      <GTab v-model="chooseTab">
+        <GTabHead>
+          <GTabItem name="vegetable">蔬菜</GTabItem>
+          <GTabItem name="fruite">新鲜水果</GTabItem>
+          <GTabItem name="cream">糕点</GTabItem>
+        </GTabHead>
+        <GTabBody>
+          <GTabPane name="fruite">橘子、葡萄</GTabPane>
+          <GTabPane name="vegetable">胡萝卜、青菜</GTabPane>
+          <GTabPane name="cream">桂花糕、绿豆糕</GTabPane>
+        </GTabBody>
+      </GTab>
+    </div>
+    <div class="wrapper">
       <g-button
         @click="
           () => {
@@ -126,6 +140,7 @@ export default {
     return {
       loading: false,
       inputValue: "123",
+      chooseTab: 'cream'
     };
   },
   mounted() {},
